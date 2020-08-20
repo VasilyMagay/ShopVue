@@ -1,4 +1,4 @@
-Vue.component('my_footer', {
+const my_footer = {
     data() {
         return {}
     },
@@ -74,4 +74,6 @@ Vue.component('my_footer', {
         </footer>
     </div>
     `
-})
+};
+
+export default my_footer;

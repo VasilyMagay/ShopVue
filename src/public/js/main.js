@@ -1,5 +1,22 @@
-const app = new Vue({
+import cart from './CartComp'
+import product_info from './ProductInfoComp'
+import products from './ProductsComp'
+import categories from './CategoriesComp'
+import home_page from './HomePageComp'
+import top_menu from './TopMenuComp'
+import my_footer from './FooterComp'
+
+const app = {
     el: '#app',
+     components: {
+        cart,
+        product_info,
+        products,
+        categories,
+        home_page,
+        top_menu,
+        my_footer,
+    },
     data: {
         categoryFilter: 0,
         showProducts: false,
@@ -48,5 +65,6 @@ const app = new Vue({
                 });
         },
     },
-});
+};
 
+export default app;

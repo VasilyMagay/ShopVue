@@ -1,4 +1,4 @@
-Vue.component('home_page', {
+const home_page = {
     data() {
         return {
             "visible": true,
@@ -65,4 +65,6 @@ Vue.component('home_page', {
         </main>
     </div>
     `
-})
+};
+
+export default home_page;

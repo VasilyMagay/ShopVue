@@ -1,4 +1,24 @@
-Vue.component('cart', {
+const cartItem = {
+    props: ['cartItem', 'img'],
+    template: `
+    <div class="cart-item">
+        <div class="block">
+            <a :id="cartItem.id_product" @click="$root.$refs.product.showInfo(cartItem, img)"><img class="prod_img" :src="img" alt="some image">
+                <div class="text">
+                    <h4>{{cartItem.product_name}}</h4>
+                    <p>Цена: {{cartItem.price}} ₽</p>
+                    <p>Кол-во: {{cartItem.quantity}}</p>
+                </div>
+            </a>
+            <p class="product-price">{{cartItem.quantity*cartItem.price}} ₽</p>
+            <button class="del-btn" @click="$emit('remove', cartItem)">&times;</button>
+        </div>
+   </div>
+    `
+};
+
+const cart = {
+    components: { cartItem },
     data(){
       return {
           imgCart: 'https://placehold.it/50x100',
@@ -55,23 +75,6 @@ Vue.component('cart', {
                 </cart-item>
             </div>
         </div>`
-});
+};
 
-Vue.component('cart-item', {
-    props: ['cartItem', 'img'],
-    template: `
-    <div class="cart-item">
-        <div class="block">
-            <a :id="cartItem.id_product" @click="$root.$refs.product.showInfo(cartItem, img)"><img class="prod_img" :src="img" alt="some image">
-                <div class="text">
-                    <h4>{{cartItem.product_name}}</h4>
-                    <p>Цена: {{cartItem.price}} ₽</p>
-                    <p>Кол-во: {{cartItem.quantity}}</p>
-                </div>
-            </a>
-            <p class="product-price">{{cartItem.quantity*cartItem.price}} ₽</p>
-            <button class="del-btn" @click="$emit('remove', cartItem)">&times;</button>
-        </div>
-   </div>
-    `
-});
+export default cart;
