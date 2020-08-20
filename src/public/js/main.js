@@ -1,5 +1,9 @@
 const app = new Vue({
     el: '#app',
+    data: {
+        categoryFilter: 0,
+        showProducts: false,
+    },
     methods: {
         getJson(url) {
             return fetch(url)
