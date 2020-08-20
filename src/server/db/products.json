@@ -1,22 +1,42 @@
 [
   {
     "id_product": 124,
-    "product_name": "Keyboard",
-    "price": 1600
+    "product_name": "Стол письменный",
+    "price": 5700,
+    "category_id": 1,
+    "description": "Письменный стол для начальной школы",
+    "flag_featured": true,
+    "flag_new": true,
+    "image": "table1.jpg"
   },
   {
     "id_product": 457,
-    "product_name": "Gamepad",
-    "price": 3000
-  },
+    "product_name": "Стол журнальный",
+    "price": 7000,
+    "category_id": 1,
+    "description": "Журнальный стол для блоггера",
+    "flag_featured": true,
+    "flag_new": false,
+    "image": "table2.jpg"
+},
   {
     "id_product": 123,
-    "product_name": "Ноутбук",
-    "price": 45600
-  },
+    "product_name": "Стол обеденный",
+    "price": 12600,
+    "category_id": 1,
+    "description": "Обеденный стол на 12 человек",
+    "flag_featured": false,
+    "flag_new": true,
+    "image": "table3.jpg"
+ },
   {
     "id_product": 456,
-    "product_name": "Мышка",
-    "price": 1000
-  }
+    "product_name": "Стул складной",
+    "price": 1500,
+    "category_id": 2,
+    "description": "Стул складной, деревнянный",
+    "flag_featured": false,
+    "flag_new": false,
+    "image": "chair1.jpg"
+}
 ]

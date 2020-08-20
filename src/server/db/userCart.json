@@ -1,0 +1,28 @@
+{
+    "amount": 0,
+    "countGoods": 0,
+    "contents": [
+        {
+            "quantity": 1,
+            "id_product": 124,
+            "product_name": "Стол письменный",
+            "price": 5700,
+            "category_id": 1,
+            "description": "Письменный стол для начальной школы",
+            "flag_featured": true,
+            "flag_new": true,
+            "image": "table1.jpg"
+        },
+        {
+            "quantity": 1,
+            "id_product": 456,
+            "product_name": "Стул складной",
+            "price": 1500,
+            "category_id": 2,
+            "description": "Стул складной, деревнянный",
+            "flag_featured": false,
+            "flag_new": false,
+            "image": "chair1.jpg"
+        }
+    ]
+}
