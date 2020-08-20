@@ -1,4 +1,36 @@
-Vue.component('products', {
+const product = {
+    props: ['product', 'img'],
+    data() {
+      return {
+        mainAPI: this.$root.$refs,
+        imgRow: 'img/icon-hover.png',
+      };
+    },
+    methods: {
+        showInfo(product, img) {
+
+            this.mainAPI.product_info.product = product;
+            this.mainAPI.product_info.img = img;
+            this.mainAPI.product_info.visible = true;
+
+            this.mainAPI.products.visible = false;
+        },
+    },
+    template: `
+    <div class="block">
+        <a :id="product.id_product" @click="showInfo(product, img)"><img class="prod_img" :src="img" alt="some image">
+            <div class="text">
+                <h4>{{product.product_name}}</h4>
+                <p>{{product.price}} ₽</p>
+                <img :src="imgRow" alt="img">
+            </div>
+        </a>
+    </div>
+    `
+};
+
+const products = {
+    components: { product },
     data(){
         return {
             catalogUrl: '',
@@ -38,34 +70,6 @@ Vue.component('products', {
             <product v-for="item of filtered" :key="item.id_product" :img="setImage(item.image)" :product="item"></product>
         </div>
     `
-});
-Vue.component('product', {
-    props: ['product', 'img'],
-    data() {
-      return {
-        mainAPI: this.$root.$refs,
-        imgRow: 'img/icon-hover.png',
-      };
-    },
-    methods: {
-        showInfo(product, img) {
+};
 
-            this.mainAPI.product_info.product = product;
-            this.mainAPI.product_info.img = img;
-            this.mainAPI.product_info.visible = true;
-
-            this.mainAPI.products.visible = false;
-        },
-    },
-    template: `
-    <div class="block">
-        <a :id="product.id_product" @click="showInfo(product, img)"><img class="prod_img" :src="img" alt="some image">
-            <div class="text">
-                <h4>{{product.product_name}}</h4>
-                <p>{{product.price}} ₽</p>
-                <img :src="imgRow" alt="img">
-            </div>
-        </a>
-    </div>
-    `
-});
+export default products;

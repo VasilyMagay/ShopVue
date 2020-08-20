@@ -1,4 +1,4 @@
-Vue.component('top_menu', {
+const top_menu = {
     data() {
         return {
             currentPage: 0,
@@ -53,4 +53,6 @@ Vue.component('top_menu', {
         </nav>
     </div>
     `
-})
+};
+
+export default top_menu;

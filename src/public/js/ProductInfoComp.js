@@ -1,4 +1,4 @@
-Vue.component('product_info', {
+const product_info = {
     data() {
       return {
         imgRow: 'img/icon-hover.png',
@@ -31,4 +31,6 @@ Vue.component('product_info', {
         </div>
     </div>
     `
-});
+};
+
+export default product_info;

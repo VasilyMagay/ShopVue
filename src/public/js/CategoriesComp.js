@@ -1,4 +1,4 @@
-Vue.component('categories', {
+const categories = {
     data(){
         return {
             categories: [],
@@ -48,4 +48,6 @@ Vue.component('categories', {
          </div>
        </div>
     `
-});
+};
+
+export default categories;
